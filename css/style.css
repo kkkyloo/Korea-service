@@ -162,6 +162,7 @@ body {
 
 .opis {
     font-size: var(--font-size-lg);
+    text-align: left !important;
 }
 
 /* ===== FOOTER ===== */
@@ -676,29 +677,12 @@ h1, h2, h3, h4, h5, h6, /* Общие заголовки */
         display: block !important;
     }
 
-    .bmw {
-        background-image: url('../images/slider_webp/bmw_mob.webp') !important;
-    }
 
-    .mers {
-        background-image: url('../images/slider_webp/mers_mob.webp') !important;
-    }
-
-    .audi {
-        background-image: url('../images/slider_webp/audi_mob.webp') !important;
-
-    }
 
     .carousel {
         margin-top: 0vw !important;
     }
 
-    .c-item {
-        background-size: cover !important;
-        min-height: 90vw !important;
-        background-position: center !important;
-        background-position: 100% 0vw !important;
-    }
 
     .caption {
         font-size: 7vw !important;
@@ -796,34 +780,19 @@ h1, h2, h3, h4, h5, h6, /* Общие заголовки */
 
 /* xr, 12pro */
 @media(max-width: 450px) and (max-height: 920px) and (min-height: 800px) and (min-width: 370px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 90vw !important;
-        background-position: center !important;
-        background-position: 100% 0vw !important;
-    }
+
 }
 
 /* s20 */
 
 @media(max-width: 430px) and (max-height: 950px) and (min-height: 880px) and (min-width: 370px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 91vw !important;
-        background-position: center !important;
-        background-position: 100% 0vw !important;
-    }
+
 }
 
 
 /* fold */
 @media(max-width: 300px) and (max-height: 700px) and (min-height: 600px) and (min-width: 240px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 43vh !important;
-        background-position: center !important;
-        background-position: 97% 0vw !important;
-    }
+
 
     figure.effect-text-four p {
         bottom: 10% !important;
@@ -839,12 +808,7 @@ h1, h2, h3, h4, h5, h6, /* Общие заголовки */
 
 /* duo */
 @media(max-width: 600px) and (max-height: 750px) and (min-height: 700px) and (min-width: 500px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 70vh !important;
-        background-position: center !important;
-        background-position: 99% 0vw !important;
-    }
+
 }
 
 /* ipad */
@@ -866,12 +830,7 @@ h1, h2, h3, h4, h5, h6, /* Общие заголовки */
 
 
 
-    .c-item {
-        background-size: cover !important;
-        min-height: 68vh !important;
-        background-position: center !important;
-        background-position: 100% 0vw !important;
-    }
+
 
     .caption {
         font-size: 7vw !important;
@@ -953,21 +912,11 @@ h1, h2, h3, h4, h5, h6, /* Общие заголовки */
 /* MINI */
 
 @media (max-width: 800px) and (min-height: 980px) and (min-width: 700px) and (max-height: 1200px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 70vh !important;
-        background-position: center !important;
-        background-position: 99% 0vw !important;
-    }
+ 
 }
 
 @media (max-width: 900px) and (max-height: 1250px) and (min-width: 700px) and (min-height: 900px) {
-    .c-item {
-        background-size: cover !important;
-        min-height: 65vh !important;
-        background-position: center !important;
-        background-position: 99% 0vw !important;
-    }
+
 }
 
 @media (max-width: 1200px) and (min-height: 500px) and (max-height: 950px) and (min-width: 1000px) {
