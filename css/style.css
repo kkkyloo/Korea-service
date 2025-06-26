@@ -1,0 +1,986 @@
+:root {
+    /* Цвета */
+    --color-primary: #252a2e;
+    --color-secondary: #191919;
+    --color-accent: #EEEAE0;
+    --color-text: white;
+    --color-text-hover: rgb(190, 190, 190);
+    
+    /* Размеры шрифтов */
+    --font-size-xs: 0.63vw;
+    --font-size-sm: 0.75vw;
+    --font-size-md: 0.9vw;
+    --font-size-lg: 1.1vw;
+    --font-size-xl: 1.3vw;
+    --font-size-xxl: 1.7vw;
+    --font-size-xxxl: 2.06vw;
+    
+    /* Отступы и позиционирование */
+    --spacing-xs: 0.5vw;
+    --spacing-sm: 1vw;
+    --spacing-md: 2vw;
+    --spacing-lg: 3vw;
+    --spacing-xl: 4vw;
+    
+    /* Размеры элементов */
+    --element-size-xs: 1.3vw;
+    --element-size-sm: 1.9vw;
+    --element-size-md: 2.4vw;
+    --element-size-lg: 3vw;
+    
+    /* Z-индексы */
+    --z-index-base: 99;
+    --z-index-high: 111;
+    
+    /* Анимации */
+    --animation-duration: 0.4s;
+    --animation-timing: ease;
+}
+
+/* ===== BASE STYLES ===== */
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color-primary);
+    /* ИЗМЕНЕНО: Используем Inter-400 как базовый шрифт, как на Сайте 2 */
+    font-family: 'Inter-400', sans-serif; 
+    color: var(--color-text);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+/* ДОБАВЛЕНО: Новые определения шрифтов с Сайта 2 */
+@font-face {
+    font-family: "Inter-400";
+    font-display: swap; /* Добавлено для лучшей производительности */
+    src: url("../font/Inter-400.ttf"); /* Убедитесь, что путь к файлу верный */
+}
+
+@font-face {
+    font-family: 'Inter-700';
+    font-display: swap; /* Добавлено для лучшей производительности */
+    src: url("../font/Inter-700.ttf"); /* Убедитесь, что путь к файлу верный */
+}
+
+
+/* ===== FORM ELEMENTS ===== */
+.form-control, 
+.form-select {
+    border-color: var(--color-secondary) !important; 
+}
+
+/* ===== NAVIGATION & HEADER ===== */
+.logo-asta {
+    top: 1.8vw;
+    position: absolute;
+    z-index: var(--z-index-base);
+    left: 4.8vw;
+    font-size: var(--font-size-xxxl);
+}
+
+.logo-city {
+    top: 4.2vw;
+    position: absolute;
+    z-index: var(--z-index-base);
+    left: 4.8vw;
+    font-size: var(--font-size-lg);
+}
+
+.logo-adress {
+    top: 5.7vw;
+    position: absolute;
+    z-index: var(--z-index-base);
+    left: 4.8vw;
+    font-size: 0.79vw; /* Можно заменить на переменную */
+}
+
+.logo-phone {
+    top: 6.8vw;
+    position: absolute;
+    z-index: var(--z-index-base);
+    left: 4.8vw;
+    font-size: 0.79vw; /* Можно заменить на переменную */
+}
+
+.nav-asta {
+    font-size: var(--font-size-md);
+}
+
+.nav-text1 { position: absolute; z-index: var(--z-index-base); left: 24.3vw; top: 2.6vw; }
+.nav-text2 { position: absolute; z-index: var(--z-index-base); left: 39.6vw; top: 2.6vw; }
+.nav-text3 { position: absolute; z-index: var(--z-index-base); left: 51.8vw; top: 2.6vw; }
+.nav-text4 { position: absolute; z-index: var(--z-index-base); left: 70.4vw; top: 2.6vw; }
+.nav-text5 { position: absolute; z-index: var(--z-index-base); left: 87.7vw; top: 2.6vw; }
+
+.mob-navbar {
+    display: none !important;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.caption { /* Общий класс для заголовков в слайдере */
+    line-height: 5vw;
+    font-size: 3.4vw;
+    text-align: center;
+    top: 4vw;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+.caption2 { /* Специфичный класс для заголовка на Сайте 1 */
+    /* Здесь можно оставить специфичные для .caption2 стили позиционирования, если они отличаются */
+}
+
+
+.bmw {
+    background-position: center;
+    top: 0vh;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.asta_info {
+    font-size: 2vw !important;
+    margin-top: 2vh !important;
+}
+
+.opis_comp {
+    font-size: 2vw !important;
+}
+
+.opis {
+    font-size: var(--font-size-lg);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    font-size: var(--font-size-md);
+}
+ .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5vw;
+      margin-left: 6vw;
+      margin-right: 6vw;
+      font-size: 0.85vw !important;
+      margin-bottom: 2vw;
+  
+  }
+  
+  .footer-item {
+      margin: 0 0.5vw;
+  }
+
+
+/* ===== UTILITY CLASSES ===== */
+.no_select {
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-dur {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color var(--animation-duration) var(--animation-timing);
+}
+
+.no-dur:hover {
+    color: var(--color-text-hover);
+}
+
+.no-dur2 {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.no-dur2:hover {
+    color: var(--color-text);
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.text-muted {
+    text-decoration: none;
+}
+
+.up {
+    transition: transform var(--animation-duration) var(--animation-timing);
+    display: inline;
+}
+
+.up:hover {
+    transform: scale(1.1);
+}
+
+/* ===== CONTACT ELEMENTS ===== */
+.contact_call_img {
+    width: var(--element-size-xs) !important;
+    margin-right: var(--spacing-xs) !important;
+}
+
+.contact_tg_img {
+    width: var(--element-size-sm) !important;
+    margin-right: 0.1vw !important;
+}
+
+.telegram {
+    font-size: var(--font-size-xl) !important;
+}
+
+.contact_up_img {
+    padding-top: var(--spacing-sm) !important;
+}
+
+.contact-modal {
+    color: black;
+}
+
+/* ===== PULSE ANIMATION ===== */
+.pulse {
+    position: fixed;
+    text-align: center;
+    right: 3.9vw;
+    top: 80vh;
+    border-radius: 100%;
+    background: #272727;
+    width: var(--element-size-lg);
+    height: var(--element-size-lg);
+    z-index: var(--z-index-high);
+}
+
+.pulse::before,
+.pulse::after {
+    content: '';
+    position: absolute;
+    border: 0.1vw solid var(--color-accent);
+    left: -0.5vw;
+    opacity: 0;
+    right: -0.5vw;
+    top: -0.5vw;
+    bottom: -0.5vw;
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
+}
+
+.pulse::after {
+    animation-delay: 1.25s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* ===== IMAGES ===== */
+.logo-img {
+    height: var(--element-size-sm) !important;
+    width: auto !important;
+    margin-top: -2% !important;
+}
+
+
+/* Фиксированная раскладка столбцов и единая ширина */
+.services table {
+  table-layout: fixed;
+  width: 100%;
+}
+.services th,
+.services td {
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+.services th:first-child,
+.services td:first-child {
+  width: 70%;
+  text-align: left;
+}
+.services th:last-child,
+.services td:last-child {
+  width: 30%;
+  text-align: right;
+}
+
+/* ДОБАВЛЕНО: Применение Inter-700 к определенным элементам, как на Сайте 2 */
+.pc_nav_left, /* Шапка ПК */
+.logo1, /* Основной текст логотипа "Корея-Сервис" */
+.caption, /* Заголовки в слайдере (у вас есть .caption и .caption2) */
+.caption2,
+.opis_comp, /* Заголовки секций типа "О нашем сервисном центре" */
+.btn, /* Все кнопки Bootstrap */
+.navbar-brand, /* Лого в мобильной навигации */
+.modal-header, /* Заголовки модальных окон */
+.accordion-header, /* Заголовки аккордеонов (если есть или будут) */
+h1, h2, h3, h4, h5, h6, /* Общие заголовки */
+.motul-text, /* Текст "КОРЕЯ-СЕРВИС MOTUL" */
+.service-category h3, /* Заголовки категорий услуг */
+.title-cars /* Заголовки в модальных окнах выбора авто (если будете использовать такой же подход) */
+ {
+    font-family: 'Inter-700', sans-serif;
+}
+
+/* ДОБАВЛЕНО: Убедимся, что тело аккордеона использует Inter-400, если вдруг где-то переопределилось */
+.accordion-body {
+    font-family: 'Inter-400', sans-serif;
+}
+
+/* Оставляем все ваши медиа-запросы без изменений ниже */
+/* ... ваши существующие медиа-запросы ... */
+
+
+
+
+
+
+
+/* ===== MOTUL Banner ===== */
+
+
+
+/* --- Адаптация для планшетов (промежуточное состояние, если необходимо) --- */
+@media (max-width: 992px) { /* Брейкпоинт для планшетов */
+
+    .motul-content {
+    margin: 0 auto;            /* Центрирование блока .motul-content */
+
+}
+
+
+
+
+
+/* Блок с картинкой (правая часть на ПК) */
+.motul-products img {
+    display: block; /* Убирает лишний отступ снизу у inline-block изображений */
+    max-width: 280px; /* Максимальная ширина картинки на ПК. Подбери значение, чтобы она не была слишком большой */
+    height: auto;     /* Автоматическая высота для сохранения пропорций */
+}
+    .motul-content {
+        max-width: 90%; /* Можно сделать контент чуть шире */
+        padding: 0 15px; /* Скорректировать боковые отступы */
+        color: white !important;
+    }
+    .motul-text {
+        font-size: 2.8vw; /* Немного крупнее шрифты */
+    }
+    .motul-official {
+        font-size: 1.8vw;
+    }
+    .motul-products img {
+        max-width: 220px; /* Картинка может быть немного меньше */
+    }
+}
+
+
+/* --- Адаптация для мобильных устройств --- */
+@media (max-width: 768px) {
+    .motul-banner {
+        padding: 6vw 0; /* Увеличиваем вертикальные отступы для всего баннера */
+    }
+
+    .motul-content {
+        flex-direction: column; /* Элементы (текст и картинка) теперь друг под другом */
+        max-width: 90%;       /* Контент занимает почти всю ширину экрана */
+        padding: 0;           /* Убираем боковые паддинги, т.к. max-width уже есть */
+    }
+
+    /* Блок с текстом на мобильных */
+    .motul-content > div:first-child {
+        text-align: center; /* Текст теперь по центру */
+        margin-right: 0;    /* Убираем правый отступ, так как элементы в столбик */
+        margin-bottom: 4vw; /* Добавляем отступ снизу, чтобы отодвинуть от картинки */
+    }
+
+    .motul-text {
+        font-size: 5.5vw;   /* Увеличиваем шрифт для мобильных */
+        margin-bottom: 1.5vw; /* Корректируем отступ между строками текста */
+    }
+
+    .motul-official {
+        font-size: 3.8vw;   /* Увеличиваем шрифт для мобильных */
+    }
+
+    /* Картинка на мобильных */
+    .motul-products img {
+        max-width: 70vw;    /* Картинка может занимать до 70% ширины экрана */
+        /* Если нужно, чтобы картинка не была больше определенного размера в пикселях, но оставалась адаптивной: */
+        /* width: 100%; */ /* Растягивается на всю ширину родителя (.motul-products) */
+        /* max-width: 280px; */ /* Но не более, чем, например, на ПК */
+        margin: 0 auto;     /* Центрирование картинки, если ее max-width меньше ширины родителя */
+    }
+}
+
+/* --- Дополнительная адаптация для очень маленьких экранов (опционально) --- */
+@media (max-width: 480px) {
+    .motul-text {
+        font-size: 6vw; /* Еще немного увеличить/скорректировать шрифт */
+    }
+    .motul-official {
+        font-size: 4.2vw;
+    }
+    .motul-products img {
+        max-width: 80vw; /* Картинка может быть еще шире относительно экрана */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 2000px) and (min-height: 1000px){
+    .btn_zapis{
+        width: auto !important;
+        height: auto !important;
+        margin-top: 1vw !important;
+        font-size: 1.1vw !important;
+    }
+    .btn_zapis2{
+        width: auto !important;
+        height: auto !important;
+        font-size: 1.1vw !important;
+    }
+}
+
+
+
+@media (max-width: 1700px) and (min-height: 550px){
+    .btn_zapis{
+        width: auto !important;
+        height: auto !important;
+        margin-top: -0.8vw !important;
+        font-size: 1vw !important;
+    }
+}
+
+@media (max-width: 1400px) and (min-height: 550px){
+    .btn_zapis{
+        width: auto !important;
+        height: auto !important;
+        margin-top: -2vw !important;
+        font-size: 0.95vw !important;
+    }
+}
+
+
+.modal-title{
+    color: black;
+}
+
+
+
+@media (max-width: 600px),
+(max-width: 900px) and (max-height: 1250px) and (min-width: 700px) and (min-height: 900px),
+(max-width: 1100px) and (min-height: 1280px) and (min-width: 950px) and (max-height: 1400px) {
+
+
+
+    .modal_svaz{
+        font-size: 7vw !important;
+    }
+    .politicmob{
+        font-size: 3vw !important;
+
+    }
+    .mobtext{
+        height: 45vw !important;
+
+    }
+    .input-field3 {
+        height: 13vw !important;
+        width: 100% !important;
+        font-size: 4vw !important;  
+        margin-bottom: 5vw;
+
+      }
+      
+      .input-field4 {
+        height: 55vw !important;
+      }
+      
+
+      .input-field5 {
+        height: 13vw !important;
+        font-size: 4vw !important;
+      }
+
+      .zapis23{
+        font-size: 4vw !important;
+
+      }
+ 
+      .politt{
+        font-size: 2.3vw !important;
+      }
+
+
+      .footer {
+        padding: 0vw;
+        margin-left: 6vw;
+        margin-right: 6vw;
+        font-size: 3vw !important;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .footer-item {
+        width: 45%; /* 45% to allow some space between the items */
+        margin-bottom: 8vw; /* Add some margin at the bottom for better spacing */
+    }
+
+
+
+
+
+
+
+
+
+    .faq-header {
+        cursor: pointer;
+        font-size: 4.7vw;
+        padding: 2vw;
+
+    }
+
+    .faq-header::before {
+        font-size: 8vw;
+    }
+
+    .faq-header.active::before {
+        font-size: 8vw;
+    }
+
+    .faq-content {
+        overflow: hidden;
+        max-height: 0;
+        padding: 0 5vw;
+        font-size: 3.7vw;
+    }
+
+    .faq-content.open {
+        max-height: 500px;
+        /* Задайте значение, большее, чем предполагаемая максимальная высота контента */
+        padding: 15px;
+        padding-bottom: 0px !important;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .MultiCarousel .MultiCarousel-inner .item>div {
+        font-size: 4vw !important;
+        margin-left: 7vw !important;
+        margin-right: 7vw !important;
+    }
+
+    .MultiCarousel {
+
+        padding: 0vw !important;
+        width: 100%;
+        position: relative;
+    }
+
+
+    .zapis {
+        display: none;
+    }
+
+    .name_brand {
+        font-size: 3.2vw !important;
+    }
+
+    .table {
+        font-size: 15px !important;
+    }
+
+    .hover-text-one figure p {
+        font-size: 80%;
+    }
+
+    figure.effect-text-four h4 {
+        top: 74%;
+    }
+
+    .hover-text-one figure h4 {
+        font-size: 78%;
+    }
+
+    .images-logo2 {
+        width: 23vw !important;
+        height: auto !important;
+        /* margin-bottom: 5vw !important; */
+    }
+
+    .navbar_pc_mob {
+        display: none !important;
+    }
+
+    .mob-navbar {
+        display: block !important;
+    }
+
+    #navmob {
+        display: block !important;
+    }
+
+    .bmw {
+        background-image: url('../images/slider_webp/bmw_mob.webp') !important;
+    }
+
+    .mers {
+        background-image: url('../images/slider_webp/mers_mob.webp') !important;
+    }
+
+    .audi {
+        background-image: url('../images/slider_webp/audi_mob.webp') !important;
+
+    }
+
+    .carousel {
+        margin-top: 0vw !important;
+    }
+
+    .c-item {
+        background-size: cover !important;
+        min-height: 90vw !important;
+        background-position: center !important;
+        background-position: 100% 0vw !important;
+    }
+
+    .caption {
+        font-size: 7vw !important;
+        line-height: 8vw !important;
+        top: 2vh !important;
+        text-align: center !important;
+        left: 0vw !important;
+        min-width: 100% !important;
+        padding: 4vw !important;
+    }
+
+    .asta_info {
+        max-width: 96% !important;
+    }
+
+
+    .opis_comp {
+        font-size: 7.5vw !important;
+    }
+
+    .opis {
+        font-size: 4vw !important;
+    }
+
+    .opis_search {
+        font-size: 7.3vw !important;
+    }
+
+    .contact_map {
+        width: 100% !important;
+        height: 50vh !important;
+
+
+    }
+
+    .map {
+        width: 100% !important;
+    }
+
+    .cont {
+        font-size: 8vw !important;
+    }
+
+    .mess_numb {
+        font-size: 5vw !important;
+    }
+
+    .tel {
+        font-size: 4.3vw !important;
+    }
+
+
+    .fot,
+    .last {
+        font-size: 3.7vw !important;
+    }
+
+    .pulse {
+        top: 80vh;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    .telegram {
+        font-size: 5vw !important;
+    }
+
+    .contact_tg_img {
+        width: 8vw !important;
+        margin-right: 1vw !important;
+    }
+
+    .contact_call_img {
+        width: 6vw !important;
+        margin-right: 2vw !important;
+    }
+
+
+    .fot {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+
+    }
+
+    .up_cont,
+    .footer {
+        padding-bottom: 3vw !important;
+        padding-top: 3vw !important;
+    }
+
+    .contact_up_img {
+        width: 13vw !important;
+    }
+}
+
+/* xr, 12pro */
+@media(max-width: 450px) and (max-height: 920px) and (min-height: 800px) and (min-width: 370px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 90vw !important;
+        background-position: center !important;
+        background-position: 100% 0vw !important;
+    }
+}
+
+/* s20 */
+
+@media(max-width: 430px) and (max-height: 950px) and (min-height: 880px) and (min-width: 370px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 91vw !important;
+        background-position: center !important;
+        background-position: 100% 0vw !important;
+    }
+}
+
+
+/* fold */
+@media(max-width: 300px) and (max-height: 700px) and (min-height: 600px) and (min-width: 240px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 43vh !important;
+        background-position: center !important;
+        background-position: 97% 0vw !important;
+    }
+
+    figure.effect-text-four p {
+        bottom: 10% !important;
+        font-size: 60% !important;
+    }
+
+    figure.effect-text-four h4 {
+        font-size: 60% !important;
+        top: 65% !important;
+    }
+
+}
+
+/* duo */
+@media(max-width: 600px) and (max-height: 750px) and (min-height: 700px) and (min-width: 500px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 70vh !important;
+        background-position: center !important;
+        background-position: 99% 0vw !important;
+    }
+}
+
+/* ipad */
+
+@media (max-width: 1100px) and (max-height: 1400px) and (min-width: 750px) and (min-height: 1000px) {
+    figure.effect-text-four p {
+        bottom: 15%;
+
+    }
+
+    figure.effect-text-four h4 {
+        top: 69%;
+    }
+
+    .table {
+        font-size: 18px !important;
+    }
+
+
+
+
+    .c-item {
+        background-size: cover !important;
+        min-height: 68vh !important;
+        background-position: center !important;
+        background-position: 100% 0vw !important;
+    }
+
+    .caption {
+        font-size: 7vw !important;
+        line-height: 8vw !important;
+        top: 1vh !important;
+        text-align: center !important;
+        left: 0vw !important;
+        min-width: 100% !important;
+        padding: 3vw !important;
+    }
+
+    .navbar-brand {
+        font-size: 7vw !important;
+    }
+
+    .cont_nav {
+        line-height: 6vw !important;
+
+    }
+
+    .nav123 {
+        font-size: 5vw !important;
+
+    }
+
+    .nav-mob {
+        font-size: 4vw !important;
+    }
+
+    .opis_comp {
+        font-size: 6vw !important;
+    }
+
+    .opis {
+        font-size: 3vw !important;
+    }
+
+    .opis_search {
+        font-size: 6vw !important;
+    }
+
+    .cont {
+        font-size: 6vw !important;
+    }
+
+    .mess_numb {
+        font-size: 4vw !important;
+    }
+
+    .tel {
+        font-size: 4vw !important;
+    }
+
+
+    .fot,
+    .last {
+        font-size: 3vw !important;
+    }
+
+    .telegram {
+        font-size: 4vw !important;
+    }
+
+    .contact_tg_img {
+        width: 8vw !important;
+        margin-right: 1vw !important;
+    }
+
+    .contact_call_img {
+        width: 6vw !important;
+        margin-right: 2vw !important;
+    }
+
+    .contact_up_img {
+        width: 13vw !important;
+    }
+}
+
+/* MINI */
+
+@media (max-width: 800px) and (min-height: 980px) and (min-width: 700px) and (max-height: 1200px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 70vh !important;
+        background-position: center !important;
+        background-position: 99% 0vw !important;
+    }
+}
+
+@media (max-width: 900px) and (max-height: 1250px) and (min-width: 700px) and (min-height: 900px) {
+    .c-item {
+        background-size: cover !important;
+        min-height: 65vh !important;
+        background-position: center !important;
+        background-position: 99% 0vw !important;
+    }
+}
+
+@media (max-width: 1200px) and (min-height: 500px) and (max-height: 950px) and (min-width: 1000px) {
+    figure.effect-text-four p {
+        bottom: 10% !important;
+        font-size: 50% !important;
+    }
+
+    figure.effect-text-four h4 {
+        font-size: 50% !important;
+        top: 65% !important;
+    }
+}
+
+/* 21:9 */
+

@@ -1,0 +1,132 @@
+.caption {
+    margin-top: 4.5vw;
+    font-size: 3vw;
+    margin-bottom: 1vw;
+}
+
+.asta_info {
+    margin-top: 2vh !important;
+}
+
+.border_radius {
+    border-radius: 1% !important;
+}
+
+.carousel-control-prev {
+    z-index: 11;
+}
+
+.carousel-control-next {
+    margin-right: 17vh !important;
+    z-index: 11;
+}
+
+.next2{
+    margin-right: 0vh !important;
+
+}
+.prev2{
+    margin-left: 17vh !important;
+}
+
+.service_text{
+    font-size: 1vw;
+}
+
+
+
+@media (max-width: 600px),
+(max-width: 900px) and (max-height: 1250px) and (min-width: 700px) and (min-height: 900px),
+(max-width: 1100px) and (min-height: 1280px) and (min-width: 950px) and (max-height: 1400px) {
+    .carousel {
+        top: 3vh !important;
+    }
+
+
+    .service_img1 {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+        padding-top: 0vh !important;
+    }
+
+    .service_img {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+    }
+
+    .img_service {
+        height: 40vh !important;
+    }
+
+    .caption {
+        margin-top: -4vw !important;
+        padding-bottom: 3vw !important;
+    }
+
+    .service_text {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+        font-size: 4.5vw !important;
+        padding-bottom: 3vh !important;
+        padding-top: 3vh !important;
+    }
+
+    .service_img2 {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+        padding-top: 0vh !important;
+
+    }
+
+    .carousel2 {
+        margin-bottom: 3vh !important;
+    }
+
+
+    .img_service2 {
+        height: 40vh !important;
+    }
+
+    .carousel-control-prev {
+        margin-left: 3vh !important;
+        z-index: 11;
+    }
+
+    .carousel-control-next {
+        margin-right: 3vh !important;
+        z-index: 11;
+    }
+
+    .service_text2 {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+        font-size: 4.5vw !important;
+        padding-bottom: 0vh !important;
+        margin-top: 3vh !important;
+    }
+
+    .service_text3 {
+        padding-left: 3vh !important;
+        padding-right: 3vh !important;
+        font-size: 4.5vw !important;
+        padding-bottom: 0vh !important;
+        margin-top: -1vh !important;
+    }
+
+    .service_text4 {
+        font-size: 4vw !important;
+        line-height: 8vw !important;
+    }
+
+    .align-items-center {
+        background-color: rgba(0, 0, 0, .2) !important
+    }
+}
+
+
+@media(min-width: 2400px) and (min-height: 800px) {
+
+    .carousel2 {
+        margin-top: 8.7vw !important;
+    }
+}

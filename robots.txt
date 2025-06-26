@@ -1,0 +1,6 @@
+Sitemap: https://www.asta-auto.ru/sitemap.xml
+User-agent: *
+Allow: 
+
+Disallow: /old_asta/
+Disallow: /form_counter/
